@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.0">
+	<file source-language="en"
+		datatype="plaintext"
+		original="messages"
+		date="2014-04-13T18:20:51Z"
+		product-name="theme_t3kit">
+		<header/>
+		<body>
+			<trans-unit id="logoTitle" xml:space="preserve">
+				<source>Home</source>
+			</trans-unit>
+			<trans-unit id="breadcrumb_label" xml:space="preserve">
+				<source>You are here</source>
+			</trans-unit>
+			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
+				<source>Breadcrumb navigation</source>
+			</trans-unit>
+			<trans-unit id="languageMenu_label" xml:space="preserve">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="imprint_label" xml:space="preserve">
+				<source>Imprint</source>
+			</trans-unit>
+			<trans-unit id="subnavigation.ariaLabel" xml:space="preserve">
+				<source>Subnavigation</source>
+			</trans-unit>
+			<trans-unit id="metaNavigation.ariaLabel" xml:space="preserve">
+				<source>Meta navigation</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
+				<source>Skip to main navigation</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
+				<source>Skip to main content</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.subNavigation" xml:space="preserve">
+				<source>Skip to subnavigation</source>
+			</trans-unit>
+			<trans-unit id="footer.firstHeadline">
+				<source>Footer</source>
+			</trans-unit>
+
+			<!--Extensions-->
+			<!--News-->
+			<!-- news custom labels -->
+			<trans-unit id="news.date.text" xml:space="preserve">
+				<source>Published: </source>
+			</trans-unit>
+			<trans-unit id="news-single-image-header" xml:space="preserve">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="news-single-video-header" xml:space="preserve">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="news.more-link.linktext" xml:space="preserve">
+				<source>Open News - </source>
+			</trans-unit>
+			<!--- news pagination aria labels -->
+			<trans-unit id="paginate.list.ariaLabel" xml:space="preserve">
+				<source>Pagination</source>
+			</trans-unit>
+			<trans-unit id="paginate.page.ariaLabel" xml:space="preserve">
+				<source>Page</source>
+			</trans-unit>
+
+
+			<!-- ContentElements labels -->
+			<trans-unit id="contentElement.slider.linkText" xml:space="preserve">
+				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.nextSlideMessage">
+				<source>Show next item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.prevSlideMessage">
+				<source>Show previous item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.firstSlideMessage">
+				<source>This is the first slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.lastSlideMessage">
+				<source>This is the last slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.paginationBulletMessage">
+				<source>Go to slide {{index}}</source>
+			</trans-unit>
+
+
+			<!-- Warning message for outdated browsers -->
+			<trans-unit id="content.behaviour.browsehappy.message" xml:space="preserve">
+				<source>You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. </source>
+			</trans-unit>
+			<trans-unit id="content.behaviour.browsehappy.link" xml:space="preserve">
+				<source>Please upgrade your browser to improve your experience.</source>
+			</trans-unit>
+
+
+			<!-- Icon Font Selector -->
+			<trans-unit id="iconFontSelector.exception.title">
+				<source>TCA Configuration error</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.populateItemsFromIcoMoonJson">
+				<source>isIcoMoon is set, but the file was not found.</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.missingConfigCssFile">
+				<source>cssFile is not set</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.missingFilename">
+				<source>cssFile is empty</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.fileExists">
+				<source>The specified file doesn't exist</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.isAllowedAbsPath">
+				<source>The specified file is not within the PATH_site OR within the lockRootPath</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.iconFileMissing">
+				<source>Missing font file included from the css</source>
+			</trans-unit>
+
+			<!--BootstrapCarousel Element-->
+			<trans-unit id="bootstrapCarousel.screenReader.title">
+				<source>Image carousel with %s slides.</source>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.screenReader.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.ariaLabel.control">
+				<source>Show iamge %1$s of %2$s</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

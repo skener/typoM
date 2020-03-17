@@ -1,0 +1,35 @@
+lib.gridelements {
+    TabGroup < .defaultGridSetup
+    TabGroup {
+        columns {
+            0 < .default
+            0 {
+                prepend = COA
+                prepend {
+                    10 = LOAD_REGISTER
+                    10 {
+                        tabNumber.cObject = TEXT
+                        tabNumber.cObject.value = 0
+                    }
+                }
+            }
+        }
+
+        cObject = FLUIDTEMPLATE
+        cObject {
+            variables {
+                activeUid = TEXT
+                activeUid.field = data.tx_gridelements_view_children.0.uid
+            }
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/TabGroup.html
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.TabGroup < lib.gridelements.TabGroup

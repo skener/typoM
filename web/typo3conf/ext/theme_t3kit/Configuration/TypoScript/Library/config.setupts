@@ -1,0 +1,32 @@
+[globalVar = LIT:1 = {$themes.configuration.baseurl}]
+    # Set the baseurl
+    config.baseURL = {$themes.configuration.baseurl}
+[global]
+
+
+config {
+# Enable spam protection
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
+    spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
+    headerComment = {$themes.configuration.headerComment}
+    sendCacheHeaders = 1
+    metaCharset = utf-8
+}
+
+
+config.compressCss = 1
+config.compressJs = 1
+config.concatenateCss = 1
+config.concatenateJs = 1
+
+config.moveJsFromHeaderToFooter = 1
+config.inlineStyle2TempFile = 0
+
+# In case of using development mode, disable compression and concatenation
+[globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
+    config.compressCss = 0
+    config.compressJs = 0
+    config.concatenateCss = 0
+    config.concatenateJs = 0
+[global]

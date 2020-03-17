@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        logoCarousel {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:logoCarousel.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:logoCarousel.description
+            iconIdentifier = content-elements-logoCarousel
+        }
+    }
+    show := addToList(logoCarousel)
+}
+

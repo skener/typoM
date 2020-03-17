@@ -1,0 +1,7 @@
+mod.wizards.newContentElement.wizardItems {
+    contentElements {
+        header = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tab.contentElements
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.contentElements.after = common

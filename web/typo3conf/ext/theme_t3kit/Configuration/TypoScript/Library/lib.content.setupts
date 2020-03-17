@@ -1,0 +1,36 @@
+# Insert colPos 0 in main content
+lib.content.main = COA
+lib.content.main {
+    50 < styles.content.get
+    50.select.where = colPos=0
+}
+# Insert colPos 1 in menu content
+lib.content.menu = COA
+lib.content.menu {
+    stdWrap.prefixComment = 2|Output of lib.content.menu
+    stdWrap.outerWrap = |
+    20 =< lib.menu.sub
+}
+# Insert colPos 2 in sidebar content
+lib.content.sidebar = COA
+lib.content.sidebar {
+    50 < styles.content.get
+    50.select.where = colPos=2
+}
+# Insert colPos 3 in top content
+lib.content.top = COA
+lib.content.top {
+    50 < styles.content.get
+    50.select.where = colPos=3
+}
+
+# Use for gridelements columns render
+lib.content.gridelementsRender = COA
+lib.content.gridelementsRender {
+    50 = RECORDS
+    50 {
+        tables = tt_content
+        source.current = 1
+        dontCheckPid = 1
+    }
+}

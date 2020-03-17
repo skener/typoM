@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:t3kit="http://typo3.org/ns/T3kit/themeT3kit/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="General" />
+
+<!--
+	=====================
+		Templates/Tag/List.html
+-->
+
+<f:section name="content">
+	<f:if condition="{tags}">
+		<ul class="news-tags">
+			<f:for each="{tags}" as="tag">
+				<li>
+					<f:if condition="{tag.uid} == {overwriteDemand.tags}">
+						<f:then>
+							<t3kit:register key="additionalBreadCrumbItem" value="{tag.title}"/>
+							<f:render section="tagLink" arguments="{tag: tag, class: 'active'}" />
+						</f:then>
+						<f:else>
+							<f:render section="tagLink" arguments="{tag: tag}" />
+						</f:else>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>
+
+<f:section name="tagLink">
+	<f:if condition="{settings.listPid}">
+		<f:then>
+			<f:link.page title="{tag.title}" class="{class}" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+				{tag.title}
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<f:link.page title="{tag.title}" class="{class}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+				{tag.title}
+			</f:link.page>
+		</f:else>
+	</f:if>
+</f:section>
+</html>
+

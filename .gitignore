@@ -16,7 +16,7 @@ web/fileadmin/*
 
 index.php
 web/typo3
-web/typo3conf/ext/*
+#web/typo3conf/ext/*
 web/typo3conf/l10n/*
 vendor
 web/typo3_src

@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/ResponsiveVideo.html [begin] -->
+	<f:if condition="{assets}">
+		<f:for each="{assets}" as="video" iteration="videoIteration">
+			<f:if condition="{video.type} == 4">
+				<div class="embed-responsive embed-responsive-16by9">
+					<f:if condition="{settings.enableShowInfo}=='0' || {settings.enableShowInfo}=='1'">
+						<f:then>
+							<f:media
+								class="embed-responsive-item"
+								file="{video}"
+								alt="{video.alternative}"
+								title="{video.title}"
+								additionalConfig="{showinfo: settings.enableShowInfo, relatedVideos: settings.enableRelatedVideos, loop: settings.enableLoop}"
+							/>
+						</f:then>
+						<f:else>
+							<f:media
+								class="embed-responsive-item"
+								file="{video}"
+								alt="{video.alternative}"
+								title="{video.title}"
+							/>
+						</f:else>
+					</f:if>
+				</div>
+			</f:if>
+		</f:for>
+	</f:if>
+<!-- theme_t3kit: Templates/ContentElements/ResponsiveVideo.html [end] -->
+</f:section>
+
+</html>

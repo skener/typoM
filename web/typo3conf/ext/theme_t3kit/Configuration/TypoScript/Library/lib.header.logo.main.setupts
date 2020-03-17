@@ -1,0 +1,16 @@
+lib.header.logo {
+    main = IMAGE
+    main.file = {$themes.configuration.header.logo.main.file}
+    main.titleText.data = LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:logoTitle
+    main.altText = {$themes.configuration.siteName}
+    main.params = class="header-middle__logo-img img-responsive"
+    main.stdWrap {
+        required = 1
+        typolink {
+            parameter = {$themes.configuration.pages.startsite}
+            parameter.insertData = 1
+            title.data = LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:logoTitle
+            ATagParams = class="header-middle__logo-link"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<div>
+	<p><f:link.page>Back</f:link.page></p>
+	<p>
+	<h2>Edit product </h2>
+	</p>
+	<p>
+	<table>
+		<f:form action="update" controller="StoreInventory" name="product" object="{product}" method="post">
+			<tr>
+				<td>
+					Name:
+				</td>
+				<td>
+					<f:form.textfield property="name" placeholder="Fill name" value="{product.name}"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Category:
+				</td>
+				<td>
+					<f:section name="main">
+						<ul>
+							<f:if condition="{product.category}" >
+								<f:for each="{products}" as="{product}">
+									<li>
+										{product.category}  {product.category}
+									</li>
+								</f:for>
+							</f:if>>
+						</ul>
+					</f:section>
+				</td>
+			</tr>
+			<tr>
+				<td>Description:
+				</td>
+				<td>
+					<f:form.textfield property="description" placeholder="Fill description" value="{product.description}"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td>Price:</td>
+				<td>
+					<f:form.textfield property="quantity" placeholder="Enter quantity" value="{product.quantity}"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<f:form.submit value="Store Product"></f:form.submit>
+				</td>
+			</tr>
+		</f:form>
+	</table>
+	</p>
+</div>

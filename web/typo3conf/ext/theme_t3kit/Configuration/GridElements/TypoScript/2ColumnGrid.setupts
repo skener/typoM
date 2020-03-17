@@ -1,0 +1,15 @@
+lib.gridelements {
+    2ColumnGrid < .defaultGridSetup
+    2ColumnGrid {
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/2ColumnGrid.html
+            dataProcessing {
+                # "inherit" from lib.fluidContent
+                800 < lib.contentElement.dataProcessing.800
+                830 < lib.contentElement.dataProcessing.830
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.2ColumnGrid < lib.gridelements.2ColumnGrid

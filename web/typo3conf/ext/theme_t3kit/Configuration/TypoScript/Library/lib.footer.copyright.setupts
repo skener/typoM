@@ -1,0 +1,6 @@
+lib.footer.copyright = TEXT
+lib.footer.copyright {
+    data = date:U
+    strftime = %Y
+    noTrimWrap= |<p>{$themes.configuration.footer.copyright} © |</p>|
+}

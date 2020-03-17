@@ -1,0 +1,10 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        contacts {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:contacts.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:contacts.description
+            iconIdentifier = content-elements-contacts
+        }
+    }
+    show := addToList(contacts)
+}

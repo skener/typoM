@@ -1,0 +1,22 @@
+#############################################
+# Google Analytics tracking
+#############################################
+# customsubcategory=googleWebMasterTools= Google Webmaster Tools
+# cat=theme,expert/googleWebMasterTools/; type=string; label= Google Analytics Account
+themes.configuration.tracking.ga_account =
+
+
+#############################################
+# Google site verification code
+#############################################
+# customsubcategory=googleWebMasterTools= Google Webmaster Tools
+# cat=theme,expert/googleWebMasterTools/; type=string; label= Google Search Console
+themes.configuration.tracking.ga_siteVerification =
+
+
+#############################################
+# Google Tag Manager
+#############################################
+# customsubcategory=googleWebMasterTools= Google Webmaster Tools
+# cat=theme,expert/googleWebMasterTools/; type=string; label= Google Tag Manager Id
+themes.configuration.tracking.ga_gtmid =

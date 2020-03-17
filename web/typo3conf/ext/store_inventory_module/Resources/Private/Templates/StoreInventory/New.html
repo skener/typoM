@@ -1,0 +1,77 @@
+<div>
+	<p>
+		<f:link.page>Back</f:link.page>
+	</p>
+	<p>
+		<f:base>Back</f:base>
+	</p>
+	<p>
+	<h2>Create product</h2>
+	</p>
+	<p>
+	<table>
+		<f:form action="store" controller="StoreInventory" name="product" object="{product}" method="post"
+						enctype="multipart/form-data">
+			<tr>
+				<td>
+					Name:
+				</td>
+				<td>
+					<f:form.textfield property="name" placeholder="Fill name"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Category:
+				</td>
+				<td>
+					<f:section name="main">
+						<ul>
+							<f:if condition="{products.category}">
+								<f:for each="{products}" as="{product}">
+									<li>
+										{product.category}
+									</li>
+								</f:for>
+							</f:if>
+							>
+						</ul>
+					</f:section>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Image:
+				</td>
+				<td>
+<!--					<f:form.upload name="image"/>-->
+					<f:form.upload property="image" >
+						<f:if condition="{resource}">
+							<f:image image="{resource}" alt="" width="50"/>
+						</f:if>
+					</f:form.upload><br />
+				</td>
+			</tr>
+			<tr>
+				<td>Description:
+				</td>
+				<td>
+					<f:form.textfield property="description" placeholder="Fill description"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td>Quantity:</td>
+				<td>
+					<f:form.textfield property="quantity" placeholder="Enter quantity"></f:form.textfield>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<f:form.submit value="Create Product"></f:form.submit>
+				</td>
+			</tr>
+		</f:form>
+	</table>
+	</p>
+</div>

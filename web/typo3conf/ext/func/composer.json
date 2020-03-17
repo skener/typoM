@@ -1,0 +1,19 @@
+{
+	"name": "friendsoftypo3/func",
+	"type": "typo3-cms-extension",
+	"description": "Brings the backend Web->functions main module for extensions to hook in",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0+"],
+
+	"require": {
+		"typo3/cms-core": "^9.0"
+	},
+	"replace": {
+		"func": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Func\\": "Classes/"
+		}
+	}
+}

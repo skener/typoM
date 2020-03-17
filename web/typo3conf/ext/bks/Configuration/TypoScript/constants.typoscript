@@ -1,0 +1,30 @@
+
+plugin.tx_bks_bkf {
+    view {
+        # cat=plugin.tx_bks_bkf/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:bks/Resources/Private/Templates/
+        # cat=plugin.tx_bks_bkf/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:bks/Resources/Private/Partials/
+        # cat=plugin.tx_bks_bkf/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:bks/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_bks_bkf//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+module.tx_bks_bkb {
+    view {
+        # cat=module.tx_bks_bkb/file; type=string; label=Path to template root (BE)
+        templateRootPath = EXT:bks/Resources/Private/Backend/Templates/
+        # cat=module.tx_bks_bkb/file; type=string; label=Path to template partials (BE)
+        partialRootPath = EXT:bks/Resources/Private/Backend/Partials/
+        # cat=module.tx_bks_bkb/file; type=string; label=Path to template layouts (BE)
+        layoutRootPath = EXT:bks/Resources/Private/Backend/Layouts/
+    }
+    persistence {
+        # cat=module.tx_bks_bkb//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

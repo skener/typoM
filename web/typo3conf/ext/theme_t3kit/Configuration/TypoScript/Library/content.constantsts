@@ -1,0 +1,21 @@
+content {
+    # always use h2 as default headline
+    defaultHeaderType = 2
+}
+
+styles.content {
+  textmedia {
+    # Max Image/Media Width
+    maxW = 900
+
+    # Remove fixed width and height for images in lightbox
+    # Calculation for lightbox is done in simple-lightbox.js
+    linkWrap.width =
+    linkWrap.height =
+
+    linkWrap.lightboxEnabled = 1
+
+    # No rel attribute needed for lightbox link
+    linkWrap.lightboxRelAttribute =
+  }
+}

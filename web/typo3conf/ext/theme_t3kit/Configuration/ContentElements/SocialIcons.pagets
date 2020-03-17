@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        socialIcons {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:socialIcons.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:socialIcons.description
+            iconIdentifier = content-elements-socialIcons
+        }
+    }
+    show := addToList(socialIcons)
+}
+

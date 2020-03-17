@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        copyrightText {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:copyrightText.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:copyrightText.description
+            iconIdentifier = content-elements-copyrightText
+        }
+    }
+    show := addToList(copyrightText)
+}
+

@@ -1,0 +1,351 @@
+plugin.tx_dyncss.overrides {
+    main-color = TEXT
+    main-color {
+        value = {$themes.configuration.less.var.mainColor}
+        if.isTrue = {$themes.configuration.less.var.mainColor}
+    }
+
+
+    # Body
+    main-body-bg = TEXT
+    main-body-bg {
+        value = {$themes.configuration.less.var.mainBodyBg}
+        if.isTrue = {$themes.configuration.less.var.mainBodyBg}
+    }
+
+
+    main-text-color = TEXT
+    main-text-color {
+        value = {$themes.configuration.less.var.mainTextColor}
+        if.isTrue = {$themes.configuration.less.var.mainTextColor}
+    }
+
+    border-color = TEXT
+    border-color {
+        value = {$themes.configuration.less.var.borderColor}
+        if.isTrue = {$themes.configuration.less.var.borderColor}
+    }
+
+
+    # Main links
+    main-link-color = TEXT
+    main-link-color {
+        value = {$themes.configuration.less.var.mainLinkColor}
+        if.isTrue = {$themes.configuration.less.var.mainLinkColor}
+    }
+
+
+    main-link-hover-color = TEXT
+    main-link-hover-color {
+        value = {$themes.configuration.less.var.mainLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.mainLinkHoverColor}
+    }
+
+
+    # HEADER
+    header-top-height = TEXT
+    header-top-height {
+        value = {$themes.configuration.less.var.headerTopHeight}
+        if.isTrue = {$themes.configuration.less.var.headerTopHeight}
+    }
+
+
+    header-top-bg-color = TEXT
+    header-top-bg-color {
+        value = {$themes.configuration.less.var.headerTopBgColor}
+        if.isTrue = {$themes.configuration.less.var.headerTopBgColor}
+    }
+
+
+    header-top-color = TEXT
+    header-top-color {
+        value = {$themes.configuration.less.var.headerTopColor}
+        if.isTrue = {$themes.configuration.less.var.headerTopColor}
+    }
+
+    mobile-nav-toggle-btn = TEXT
+    mobile-nav-toggle-btn {
+        value = {$themes.configuration.less.var.mobileNavToggleBtn}
+        if.isTrue = {$themes.configuration.less.var.mobileNavToggleBtn}
+    }
+
+    header-middle-height = TEXT
+    header-middle-height {
+        value = {$themes.configuration.less.var.headerMiddleHeight}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleHeight}
+    }
+
+
+    header-middle-bg-color = TEXT
+    header-middle-bg-color {
+        value = {$themes.configuration.less.var.headerMiddleBgColor}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleBgColor}
+    }
+
+
+    header-border-color = TEXT
+    header-border-color {
+        value = {$themes.configuration.less.var.headerBorderColor}
+        if.isTrue = {$themes.configuration.less.var.headerBorderColor}
+    }
+
+    # Header middle search
+    header-middle-search-height = TEXT
+    header-middle-search-height {
+        value = {$themes.configuration.less.var.headerMiddleSearchHeight}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleSearchHeight}
+    }
+
+    header-middle-search-btn-bg = TEXT
+    header-middle-search-btn-bg {
+            value = {$themes.configuration.less.var.headerMiddleSearchBtnBg}
+            if.isTrue = {$themes.configuration.less.var.headerMiddleSearchBtnBg}
+    }
+    header-middle-search-btn-hover = TEXT
+    header-middle-search-btn-hover {
+            value = {$themes.configuration.less.var.headerMiddleSearchBtnHover}
+            if.isTrue = {$themes.configuration.less.var.headerMiddleSearchBtnHover}
+    }
+
+    search-text-color = TEXT
+    search-text-color {
+            value = {$themes.configuration.less.var.HeaderSearchFieldTextColor}
+            if.isTrue = {$themes.configuration.less.var.HeaderSearchFieldTextColor}
+    }
+
+
+    # Logo
+    logo-top = TEXT
+    logo-top {
+        value = {$themes.configuration.less.var.logoTop}
+        if.isTrue = {$themes.configuration.less.var.logoTop}
+    }
+
+
+    logo-left = TEXT
+    logo-left {
+        value = {$themes.configuration.less.var.logoLeft}
+        if.isTrue = {$themes.configuration.less.var.logoLeft}
+    }
+
+
+    logo-width = TEXT
+    logo-width {
+        value = {$themes.configuration.less.var.logoWidth}
+        if.isTrue = {$themes.configuration.less.var.logoWidth}
+    }
+
+
+    # Navigation
+    nav-height = TEXT
+    nav-height {
+        value = {$themes.configuration.less.var.navHeight}
+        if.isTrue = {$themes.configuration.less.var.navHeight}
+    }
+
+
+
+    nav-link-color = TEXT
+    nav-link-color {
+        value = {$themes.configuration.less.var.navLinkColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkColor}
+
+    }
+
+
+    nav-link-hover-color = TEXT
+    nav-link-hover-color {
+        value = {$themes.configuration.less.var.navLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkHoverColor}
+    }
+
+
+    nav-link-active-color = TEXT
+    nav-link-active-color {
+        value = {$themes.configuration.less.var.navLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkActiveColor}
+    }
+
+
+    nav-link-active-hover-color = TEXT
+    nav-link-active-hover-color {
+        value = {$themes.configuration.less.var.navLinkActiveHoverColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkActiveHoverColor}
+    }
+
+
+    nav-link-hover-background = TEXT
+    nav-link-hover-background {
+        value = {$themes.configuration.less.var.navLinkHoverBackground}
+        if.isTrue = {$themes.configuration.less.var.navLinkHoverBackground}
+    }
+
+
+    nav-link-arrow-color = TEXT
+    nav-link-arrow-color {
+        value = {$themes.configuration.less.var.navLinkArrowColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkArrowColor}
+    }
+
+
+    nav-background-color = TEXT
+    nav-background-color {
+        value = {$themes.configuration.less.var.navBackgroundColor}
+        if.isTrue = {$themes.configuration.less.var.navBackgroundColor}
+    }
+
+
+    nav-search-btn-color = TEXT
+    nav-search-btn-color {
+        value = {$themes.configuration.less.var.navSearchBtnColor}
+        if.isTrue = {$themes.configuration.less.var.navSearchBtnColor}
+    }
+
+
+    # Social icons
+    social-icons-bg-color = TEXT
+    social-icons-bg-color {
+        value = {$themes.configuration.less.var.socialIconsBgColor}
+        if.isTrue = {$themes.configuration.less.var.socialIconsBgColor}
+    }
+
+
+    social-icons-hover-color = TEXT
+    social-icons-hover-color {
+        value = {$themes.configuration.less.var.socialIconsHoverColor}
+        if.isTrue = {$themes.configuration.less.var.socialIconsHoverColor}
+    }
+
+
+
+    # Breadcrumbs
+    breadcrumbs-background = TEXT
+    breadcrumbs-background {
+        value = {$themes.configuration.less.var.breadcrumbsBackground}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsBackground}
+    }
+
+
+    breadcrumbs-link-color = TEXT
+    breadcrumbs-link-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkColor}
+    }
+
+
+    breadcrumbs-link-active-color = TEXT
+    breadcrumbs-link-active-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkActiveColor}
+    }
+
+
+    breadcrumbs-link-hover-color = TEXT
+    breadcrumbs-link-hover-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkHoverColor}
+    }
+
+
+    # Sub navigation
+    sub-navigation-background = TEXT
+    sub-navigation-background {
+        value = {$themes.configuration.less.var.subNavigationBackground}
+        if.isTrue = {$themes.configuration.less.var.subNavigationBackground}
+    }
+
+
+    sub-navigation-border = TEXT
+    sub-navigation-border {
+        value = {$themes.configuration.less.var.subNavigationBorder}
+        if.isTrue = {$themes.configuration.less.var.subNavigationBorder}
+    }
+
+
+    sub-navigation-active-border = TEXT
+    sub-navigation-active-border {
+        value = {$themes.configuration.less.var.subNavigationActiveBorder}
+        if.isTrue = {$themes.configuration.less.var.subNavigationActiveBorder}
+    }
+
+
+    sub-navigation-link-color = TEXT
+    sub-navigation-link-color {
+        value = {$themes.configuration.less.var.subNavigationLinkColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkColor}
+    }
+
+
+    sub-navigation-link-hover-color = TEXT
+    sub-navigation-link-hover-color {
+        value = {$themes.configuration.less.var.subNavigationLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkHoverColor}
+    }
+
+
+
+    sub-navigation-link-hover-bg = TEXT
+    sub-navigation-link-hover-bg {
+        value = {$themes.configuration.less.var.subNavigationLinkHoverBg}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkHoverBg}
+    }
+
+
+
+    sub-navigation-link-active-color = TEXT
+    sub-navigation-link-active-color {
+        value = {$themes.configuration.less.var.subNavigationLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkActiveColor}
+    }
+
+
+
+    sub-navigation-link-active-bg = TEXT
+    sub-navigation-link-active-bg {
+        value = {$themes.configuration.less.var.subNavigationLinkActiveBg}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkActiveBg}
+    }
+
+
+
+    # FOOTER
+    footer-background = TEXT
+    footer-background {
+        value = {$themes.configuration.less.var.footerBackground}
+        if.isTrue = {$themes.configuration.less.var.footerBackground}
+    }
+
+
+    footer-color = TEXT
+    footer-color {
+        value = {$themes.configuration.less.var.footerColor}
+        if.isTrue = {$themes.configuration.less.var.footerColor}
+    }
+
+
+    footer-link-color = TEXT
+    footer-link-color {
+        value = {$themes.configuration.less.var.footerLinkColor}
+        if.isTrue = {$themes.configuration.less.var.footerLinkColor}
+    }
+
+
+    footer-link-hover-color = TEXT
+    footer-link-hover-color {
+        value = {$themes.configuration.less.var.footerLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.footerLinkHoverColor}
+    }
+
+    # BUTTONS
+    btn-default-color = TEXT
+    btn-default-color {
+       value = {$themes.configuration.less.var.buttonTextColor}
+        if.isTrue = {$themes.configuration.less.var.buttonTextColor}
+    }
+
+    btn-default-bg = TEXT
+    btn-default-bg {
+           value = {$themes.configuration.less.var.buttonBgColor}
+            if.isTrue = {$themes.configuration.less.var.buttonBgColor}
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<body>
+<f:section name="Main">
+	<!-- From -->
+	<f:form action="pageEvaluation">
+		<div class="row">
+            <div class="form-group col-md-6">
+                <label for="table"><f:translate key="partials.module.select.table" /></label>
+                <f:form.select
+                        id="table"
+                        options="{tables}"
+                        class="form-control"
+                        name="table"
+                        additionalAttributes="{onchange:'this.form.submit();'}"
+                        value="{table}"
+                        />
+            </div>
+			<div class="form-group col-md-6">
+                <f:if condition="{records}">
+                    <f:then>
+                        <label for="cs-record"><f:translate key="partials.module.select.record" /></label>
+                        <f:form.select
+                                id="cs-record"
+                                options="{records}"
+                                class="form-control"
+                                prependOptionLabel="{f:translate(key:'select.prepend')}"
+                                name="record"
+                                additionalAttributes="{onchange:'this.form.submit();'}"
+                                value="{record}"
+                                />
+                    </f:then>
+                    <f:else>
+                        <label for="lang"><f:translate key="partials.module.select.lang" /></label>
+                        <f:form.select
+                                id="lang"
+                                options="{languages}"
+                                class="form-control"
+                                name="lang"
+                                additionalAttributes="{onchange:'this.form.submit();'}"
+                                value="{lang}"
+                                />
+                    </f:else>
+                </f:if>
+
+			</div>
+		</div>
+	</f:form>
+</f:section>
+</body>

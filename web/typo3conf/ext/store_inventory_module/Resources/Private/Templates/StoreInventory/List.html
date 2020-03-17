@@ -1,0 +1,49 @@
+<div>
+	<f:debug>{_all}</f:debug>
+	<p>
+	<h3>List of Products:</h3></p>
+	<div>
+	<div>
+		<f:link.action action="new">Create Products</f:link.action>
+	</div>
+	<table border="1" cellspacing="1" cellpadding="5">
+		<tr style="background-color: #01b2d2">
+			<th>Product Name</th>
+			<th>Category</th>
+			<td>Image</td>
+			<th>Description</th>
+			<th>Quantity</th>
+			<th>Created</th>
+			<th>Last Modified</th>
+			<th>Edit product</th>
+			<th>Delete product</th>
+		</tr>
+		<f:for each="{products}" as="product">
+			<tr>
+				<td align="top"><f:link.action action="show" arguments="{product:product}">{product.name}</f:link.action></td>
+				<td align="top">
+					<f:if condition="{product.category}">{product.category.title}</f:if>
+				</td>
+				<td align="top">
+					<f:if condition="{product.image}"><f:image image="{product.image}" alt="" width="50"/></f:if>
+				</td>
+				<td align="top">
+					<f:format.crop maxCharacters="100">{product.description}</f:format.crop>
+				</td>
+				<td align="top">{product.quantity}</td>
+				<td align="top">
+					<f:format.date date="{product.crdate}" format="d.m.Y [H:i:s]"/>
+				</td><td align="top">
+					<f:format.date date="{product.tstamp}" format="d.m.Y [H:i:s]"/>
+				</td>
+				<td align="top">
+					<f:link.action action="edit" arguments="{product:product}">Edit Product #{product.uid}</f:link.action>
+				</td>
+				<td align="top">
+					<f:link.action action="delete" arguments="{product:product}">Delete Product #{product.uid}</f:link.action>
+				</td>
+			</tr>
+		</f:for>
+	</table>
+	</div>
+</div>

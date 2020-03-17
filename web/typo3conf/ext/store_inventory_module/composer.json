@@ -1,0 +1,17 @@
+{
+  "name": "module/pxl-store-inventory",
+  "type": "typo3-cms-extension",
+  "description": "",
+  "authors": [],
+  "require": {
+    "typo3/cms-core": "^9.5"
+  },
+  "autoload": {
+    "classmap": [
+
+    ],
+    "psr-4": {
+      "Module\\StoreInventory\\": "Classes"
+    }
+  }
+}
