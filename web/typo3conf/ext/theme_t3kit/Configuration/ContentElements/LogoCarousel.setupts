@@ -1,0 +1,25 @@
+tt_content {
+    logoCarousel =< lib.contentElement
+    logoCarousel {
+        templateName = LogoCarousel
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as = logos
+            }
+            20 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
+            20 {
+                fieldName = pi_flexform
+                as = settings
+            }
+            # "inherit" from lib.fluidContent
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+        settings {
+            defaultMaxWidth = 320
+            defaultMaxHeight = 180
+        }
+    }
+}

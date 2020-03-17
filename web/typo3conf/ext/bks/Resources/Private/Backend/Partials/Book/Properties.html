@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-bks" >
+	<tr>
+		<td>
+			<f:translate key="tx_bks_domain_model_book.title" />
+		</td>
+		<td>
+			{book.title}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_bks_domain_model_book.author" />
+		</td>
+		<td>
+			{book.author}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_bks_domain_model_book.image" />
+		</td>
+		<td>
+			<f:if condition="{book.image}"><f:image image="{book.image.originalResource.name}" alt="" width="50"/></f:if>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_bks_domain_model_book.price" />
+		</td>
+		<td>
+			{book.price}
+		</td>
+	</tr>
+</table>
+</html>

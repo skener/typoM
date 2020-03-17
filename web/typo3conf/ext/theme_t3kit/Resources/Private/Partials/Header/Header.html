@@ -1,0 +1,123 @@
+{namespace theme=KayStrobach\Themes\ViewHelpers}
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<f:section name="Default">
+
+<!-- theme_t3kit: Partials/Header/Header.html [begin] -->
+
+<header class="header">
+	<div class="header-top-wrp">
+
+		<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
+
+			<div class="header-top">
+				<div class="header-top__main-navigation-toggle-btn">
+					<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
+						<span>toggle menu</span>
+					</button>
+				</div>
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContacts')}">
+					<div class="header-top__contact">
+						<div class="header-top__contact-tel">
+							<span class="icons icon-t3-mobile" aria-hidden="true"></span>
+							<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContactsLabels')}">
+								<span class="header-top__contact-tel-title" aria-hidden="true"><f:translate key="callUs_label" /></span>
+							</f:if>
+							<a class="header-top__contact-tel-link" href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}">{theme:constant(constant: 'themes.configuration.contacts.phone')}</a>
+						</div>
+						<div class="header-top__contact-email">
+							<span class="icons icon-t3-mail" aria-hidden="true"></span>
+							<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContactsLabels')}">
+								<span class="header-top__contact-email-title" aria-hidden="true"><f:translate key="emailUs_label" /></span>
+							</f:if>
+							<f:link.email class="header-top__contact-email-link" title="{f:translate(key: 'emailUs_label')}" additionalAttributes="{aria-label: '{f:translate(key: \'emailUs_label\')}'}" email="{theme:constant(constant: 'themes.configuration.contacts.email')}" />
+						</div>
+					</div>
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangMenu')}">
+					<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopSearch')}">
+					<f:cObject typoscriptObjectPath="lib.header.top.search" />
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopNavigation')}">
+					<f:cObject typoscriptObjectPath="lib.menu.top" />
+				</f:if>
+
+			</div>
+		</f:if>
+	</div>
+
+
+	<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddle')}">
+		<div class="header-middle-wrp">
+			<div class="header-middle">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleLogo')}">
+					<div class="header-middle__logo">
+						<f:cObject typoscriptObjectPath="lib.header.logo.main" />
+					</div>
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSocIcons')}">
+					<div class="header-middle__social-icon">
+						<f:cObject typoscriptObjectPath="lib.header.middle.socialmedia" />
+					</div>
+				</f:if>
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSearch')}">
+
+					<f:cObject typoscriptObjectPath="lib.header.middle.search" />
+				</f:if>
+			</div>
+		</div>
+	</f:if>
+
+
+<!-- theme_t3kit: Main menu [begin] -->
+
+	<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}==0">
+		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
+			<span>toggle menu</span>
+		</button>
+		<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+			<div class="main-navigation-mobile__language-menu">
+				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+			</div>
+		</f:if>
+	</f:if>
+
+	<nav id="main-navigation" class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')}">
+		<div class="main-navigation__items-wrp js__navigation__items-wrp">
+			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLogoInNavigation')}">
+				<div class="main-navigation__logo">
+					<f:cObject typoscriptObjectPath="lib.header.logo.main" />
+				</div>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+			</f:if>
+			<ul class="main-navigation__items-list js__main-navigation__items-list {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.navbarPos\')} == right', then: '_right-pos')}">
+				<f:cObject typoscriptObjectPath="lib.menu.main" />
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu')}">
+					<f:cObject typoscriptObjectPath="lib.menu.topMobile" />
+				</f:if>
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMainMenuSearch')}">
+					<f:cObject typoscriptObjectPath="lib.menu.main.search" />
+				</f:if>
+			</ul>
+		</div>
+	</nav>
+
+<!-- theme_t3kit: Main menu [end] -->
+
+	<div class="main-navigation__search-box-overlay js__main-navigation__search-box-overlay"></div>
+	<div class="header-top__language-menu-overlay js__header-top__language-menu-overlay"></div>
+</header>
+
+
+<!-- theme_t3kit: Partials/Header/Header.html [end] -->
+</f:section>
+</div>

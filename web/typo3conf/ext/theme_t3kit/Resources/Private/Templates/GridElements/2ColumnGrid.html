@@ -1,0 +1,12 @@
+<f:layout name="Default" />
+<f:section name="Main">
+	<f:comment><!-- ### Content ### --></f:comment>
+	<div class="row">
+		<div class="col-md-6">
+			<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
+		</div>
+		<div class="col-md-6">
+			<f:render partial="RenederColumns" arguments="{children: children, col: 1}"/>
+		</div>
+	</div>
+</f:section>

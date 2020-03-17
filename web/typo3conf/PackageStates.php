@@ -149,6 +149,12 @@ return [
         'theme_t3kit' => [
             'packagePath' => 'typo3conf/ext/theme_t3kit/',
         ],
+        'bks' => [
+            'packagePath' => 'typo3conf/ext/bks/',
+        ],
+        'extension_builder' => [
+            'packagePath' => 'typo3conf/ext/extension_builder/',
+        ],
         'func' => [
             'packagePath' => 'typo3conf/ext/func/',
         ],
@@ -166,6 +172,9 @@ return [
         ],
         'solr' => [
             'packagePath' => 'typo3conf/ext/solr/',
+        ],
+        'store_inventory_module' => [
+            'packagePath' => 'typo3conf/ext/store_inventory_module/',
         ],
     ],
     'version' => 5,

@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        responsiveVideo {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.description
+            iconIdentifier = content-elements-responsiveVideo
+        }
+    }
+    show := addToList(responsiveVideo)
+}
+

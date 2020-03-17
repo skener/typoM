@@ -1,0 +1,44 @@
+page.meta {
+	### Enable Twitter Cards ###
+	twitter:card = summary
+	twitter:card {
+		override = summary_large_image
+		override.if.isTrue.data = field:twitter_image // field:og_image
+	}
+
+	### twitter:creator ###
+	twitter:creator {
+		data = page:tx_csseo_tw_creator
+		htmlSpecialChars = 1
+		wrap = @|
+		ifEmpty = {$plugin.tx_csseo.social.twitter.creator}
+		required = 1
+	}
+
+	### twitter:site ###
+	twitter:site {
+		data = page:tx_csseo_tw_site
+		htmlSpecialChars = 1
+		wrap = @|
+		ifEmpty = {$plugin.tx_csseo.social.twitter.site}
+		required = 1
+	}
+
+	### twitter:image ###
+	twitter:image.stdWrap.typolink {
+		parameter.stdWrap {
+			cObject = IMG_RESOURCE
+			cObject.file {
+				import {
+					preUserFunc = Clickstorm\CsSeo\UserFunc\HeaderData->getSocialMediaImage
+					preUserFunc.field = twitter_image
+					ifEmpty.data = path:{$plugin.tx_csseo.social.twitter.defaultImage} // path:{$plugin.tx_csseo.social.defaultImage}
+				}
+				height < plugin.tx_csseo.social.twitter.image.height
+				width < plugin.tx_csseo.social.twitter.image.width
+			}
+		}
+		returnLast = url
+		forceAbsoluteUrl = 1
+	}
+}

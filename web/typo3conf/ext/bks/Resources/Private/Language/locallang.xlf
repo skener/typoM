@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-17T14:30:02Z" product-name="bks">
+		<header/>
+		<body>
+			<trans-unit id="tx_bks_domain_model_book">
+				<source>Book</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_book.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_book.author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_book.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_book.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_book.author_name">
+				<source>Author Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_author.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bks_domain_model_author.book_name">
+				<source>Book Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

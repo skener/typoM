@@ -1,0 +1,10 @@
+lib.gridelements {
+    3ColumnGrid < .defaultGridSetup
+    3ColumnGrid {
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.3ColumnGrid < lib.gridelements.3ColumnGrid

@@ -1,0 +1,16 @@
+lib.gridelements {
+    SimpleAccordion < .defaultGridSetup
+    SimpleAccordion {
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/SimpleAccordion.html
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.SimpleAccordion < lib.gridelements.SimpleAccordion

@@ -1,0 +1,30 @@
+tt_content {
+    contentElementSlider =< lib.contentElement
+    contentElementSlider {
+        templateName = Slider
+        dataProcessing {
+            # Process files
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as = slides
+            }
+            20 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
+            20 {
+                fieldName = pi_flexform
+                as = settings
+            }
+            # "inherit" from lib.fluidContent
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+        settings {
+            defaultWidth = 1920c
+            appearance {
+            # Extend appearance for each slide for this element
+               10 = _light-transparent-bg
+               20 = _dark-transparent-bg
+            }
+        }
+    }
+}

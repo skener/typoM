@@ -1,0 +1,73 @@
+{
+  "name": "t3kit/theme-t3kit",
+  "description": "Base Theme fot t3kit project",
+  "type": "typo3-cms-extension",
+  "keywords": ["t3kit", "typo3", "cms", "starter"],
+  "homepage": "http://t3kit.com/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "t3kit Community",
+      "homepage": "https://github.com/t3kit"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/t3kit/theme_t3kit/issues",
+    "forum": "https://typo3.slack.com/messages/t3kit",
+    "source": "https://github.com/t3kit/theme_t3kit",
+    "docs": "https://github.com/t3kit/t3kit/blob/master/README.md"
+  },
+  "autoload": {
+      "psr-4": {
+          "T3kit\\themeT3kit\\": "Classes/"
+      }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/themes"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/TYPO3.dyncss"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/TYPO3.dyncss_less"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2",
+
+    "typo3/cms-backend": "~9.5.1",
+    "typo3/cms-core": "~9.5.1",
+    "typo3/cms-extbase": "~9.5.1",
+    "typo3/cms-extensionmanager": "~9.5.1",
+    "typo3/cms-fluid": "~9.5.1",
+    "typo3/cms-frontend": "~9.5.1",
+    "typo3/cms-install": "~9.5.1",
+    "typo3/cms-fluid-styled-content": "~9.5.1",
+    "typo3/cms-rte-ckeditor": "~9.5.1",
+    "typo3/cms-form": "~9.5.1",
+    "typo3/cms-felogin": "~9.5.1",
+
+    "typo3-themes/themes": "dev-typo3_9.x",
+    "kaystrobach/dyncss": "dev-typo3_9.x",
+    "kaystrobach/dyncss-less": "dev-typo3_9.x",
+
+    "gridelementsteam/gridelements": "~9.2.1",
+    "clickstorm/go_maps_ext": "~3.1.0",
+    "georgringer/news": "~7.1.0",
+    "pixelant/pxa-newsletter-subscription": "~9.0.2",
+    "pixelant/pxa-form-enhancement": "~3.2.5",
+    "pixelant/pxa-cookie-bar": "~2.1.1",
+    "friendsoftypo3/frontend-editing": "~1.5.0",
+    "clickstorm/cs_seo": "~4.1.0",
+    "apache-solr-for-typo3/solr": "~9.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<p class="no-margin">
+	<f:translate key="evaluation.images.settings"/>
+</p>
+
+<f:if condition="{result.count}">
+	<f:then>
+		<f:if condition="{result.images}">
+			<h4>
+				<f:translate key="evaluation.images.withoutAlt"/>
+			</h4>
+			<f:for each="{result.images}" as="image">
+				<figure>
+					<img src="{image}" />
+					<figcaption>{image}</figcaption>
+				</figure>
+			</f:for>
+		</f:if>
+	</f:then>
+</f:if>
+

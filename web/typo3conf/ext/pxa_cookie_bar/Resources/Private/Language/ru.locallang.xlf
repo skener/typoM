@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2016-05-10T10:02:00Z" product-name="pxa_cookie_bar">
+        <header/>
+        <body>
+            <trans-unit id="fe.message">
+                <target>Этот сайт использует "cookies". Продолжая использовать этот сайт, Вы соглашаетесь использовать "cookies". Узнать больше можно прочитав нашу политику конфиденциальности.</target>
+            </trans-unit>
+            <trans-unit id="fe.readmore">
+                <target>Читать больше</target>
+            </trans-unit>
+            <trans-unit id="fe.accept">
+                <target>Принять</target>
+            </trans-unit>
+            <trans-unit id="fe.decline">
+                <target>Отклонить</target>
+            </trans-unit>
+            <trans-unit id="fe.close_1">
+                <target>x</target>
+            </trans-unit>
+            <trans-unit id="fe.close_2">
+                <target>Закрыть</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

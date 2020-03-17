@@ -1,0 +1,107 @@
+plugin.tx_pxacookiebar {
+    view {
+        templateRootPaths {
+            10 = {$plugin.tx_pxacookiebar.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            10 = {$plugin.tx_pxacookiebar.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            10 = {$plugin.tx_pxacookiebar.view.layoutRootPath}
+        }
+    }
+
+    features {
+        # uncomment the following line to enable the new Property Mapper.
+        # rewrittenPropertyMapper = 1
+    }
+
+    settings {
+        showDefault = {$plugin.tx_pxacookiebar.settings.showDefault}
+        activeConsent = {$plugin.tx_pxacookiebar.settings.activeConsent}
+        oneTimeVisible = {$plugin.tx_pxacookiebar.settings.oneTimeVisible}
+        detailPageUid = {$plugin.tx_pxacookiebar.settings.detailPageUid}
+
+        closeCookiePageType = 314638125
+    }
+}
+
+# Include all libs
+page {
+    includeJSFooterlibs {
+        cookieWarning = EXT:pxa_cookie_bar/Resources/Public/Js/CookieWarningHelperFooter.js
+    }
+    includeJSFooter {
+        cookieWarning = EXT:pxa_cookie_bar/Resources/Public/Js/pxa_cookie_warning.js
+    }
+    includeCSS {
+        cookieWarning = EXT:pxa_cookie_bar/Resources/Public/Css/bar.css
+    }
+}
+
+# Required styling
+plugin.tx_pxacookiebar._CSS_DEFAULT_STYLE (
+    #pxa-cookie-bar{display:none;}.visible-cookie-warning #pxa-cookie-bar{display:block;}
+)
+
+# Render message at the very end
+page.11905 = USER
+page.11905 {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = PxaCookieBar
+    pluginName = Pi1
+    vendorName = Pixelant
+
+    settings =< plugin.tx_pxacookiebar.settings
+    view =< plugin.tx_pxacookiebar.view
+}
+
+# Need to render some stuff at very begging to avoid page speed issues
+# and prevent JS from setting cookies in case of active consent
+page.headerData.84 = COA
+page.headerData.84 {
+    10 = COA
+    10 {
+        10 = USER
+        10 {
+            userFunc = Pixelant\PxaCookieBar\UserFunc\IncludeFileInlineUserFunc->includeFile
+            file = EXT:pxa_cookie_bar/Resources/Public/Js/CookieWarningHelperHeader.min.js
+        }
+        wrap = <script>|</script>
+    }
+    20 = COA
+    20 {
+        10 < page.11905
+        10 {
+            switchableControllerActions {
+                CookieWarning {
+                    1 = getJsCookieWarningSettings
+                }
+            }
+        }
+        wrap = <script>PxaCookieBarHelper.setSettings(|);PxaCookieBarHelper.init();</script>
+    }
+}
+
+cookieWarningCloseCookie = PAGE
+cookieWarningCloseCookie.typeNum = 314638125
+cookieWarningCloseCookie.config.disableAllHeaderCode = 1
+cookieWarningCloseCookie.config.debug = 0
+
+cookieWarningCloseCookie.5 < page.11905
+cookieWarningCloseCookie.5 {
+    switchableControllerActions {
+        CookieWarning {
+            1 = closeCookieBar
+        }
+    }
+}
+
+# Position of bar
+[globalVar = LIT:bottom={$plugin.tx_pxacookiebar.settings.position}]
+    plugin.tx_pxacookiebar.settings.wrapperClasses = bottom-message-wrap
+[else]
+    plugin.tx_pxacookiebar.settings.wrapperClasses = top-message-wrap
+[global]

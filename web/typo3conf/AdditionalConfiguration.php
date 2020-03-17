@@ -119,5 +119,21 @@ switch (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()) {
         // disable INFO/WARNING logs in TYPO3 9 LTS for production. (var/log/typo3_<hash>.log)
         $GLOBALS['TYPO3_CONF_VARS']['LOG']['TYPO3']['CMS']['writerConfiguration'][\TYPO3\CMS\Core\Log\LogLevel::INFO] = [];
         $GLOBALS['TYPO3_CONF_VARS']['LOG']['TYPO3']['CMS']['writerConfiguration'][\TYPO3\CMS\Core\Log\LogLevel::WARNING] = [];
-    break; //____________________________________________________________________________________________________________
+    break; //
+    //
+    //__________________________________________________________________________________________________________
 }
+
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_core']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_hash']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_pages']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_pagesection']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_phpcode']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_runtime']['backend'] = \TYPO3\CMS\Core\Cache\Backend\TransientMemoryBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_rootline']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_imagesizes']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['l10n']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_object']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_reflection']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extbase_datamapfactory_datamap']['backend'] = \TYPO3\CMS\Core\Cache\Backend\NullBackend::class;

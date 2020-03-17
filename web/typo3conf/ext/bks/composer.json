@@ -1,0 +1,23 @@
+{
+    "name": "skener/bks",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skener\\Bks\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Skener\\Bks\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "skener/bks": "self.version",
+        "typo3-ter/bks": "self.version"
+    }
+}

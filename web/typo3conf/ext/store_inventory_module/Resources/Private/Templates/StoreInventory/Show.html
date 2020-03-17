@@ -1,0 +1,54 @@
+<div>
+	<p><f:link.page>Back</f:link.page></p>
+	<p>
+	<h2>Product Name: {product.name} </h2>
+	</p>
+	<p>
+	<table border="1" cellspacing="1" cellpadding="5">
+		<tr>
+			<th>
+				Name:
+			</th>
+			<td>
+				{product.name}
+			</td>
+		</tr>
+	<tr>
+		<th>
+			Image:
+		</th>
+		<td>
+			<f:if condition="{product.image}"><f:image image="{product.image}" alt="" width="50"/></f:if>
+		</td>
+	</tr>
+		<tr>
+			<th>
+				Category:
+			</th>
+			<td>
+				<f:if condition="{product.category}">{product.category.title}</f:if>
+			</td>
+		</th>
+		<tr>
+			<th>Created at:
+			</th>
+			<td>
+				<f:format.date date="{product.crdate}" format="d.m.Y [H:i:s]"/>
+			</td>
+		</tr>
+	<tr>
+		<th>Description:
+		</th>
+		<td>
+			{product.description}
+		</td>
+	</tr>
+		<tr>
+			<th>Price:</th>
+			<td>
+				{product.quantity}
+			</td>
+		</tr>
+	</table>
+	</p>
+</div>

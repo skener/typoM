@@ -1,0 +1,6 @@
+plugin.tx_storeinventory {
+	persistence {
+		# cat=plugin.tx_uploadexample//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

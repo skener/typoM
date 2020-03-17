@@ -86,7 +86,8 @@
     "doctrine/common": "^2.9",
     "friendsoftypo3/cms-func": "^9.0.1",
 
-    "t3kit/theme-t3kit": "~2.10.3"
+    "t3kit/theme-t3kit": "~2.10.3",
+    "friendsoftypo3/extension-builder": "^9.10"
   },
   "require-dev": {
     "t3kit/db": "~2.10.2",
@@ -112,6 +113,13 @@
   "extra": {
     "typo3/cms": {
       "web-dir": "web"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MyVendor\\StoreInventory\\": "web/typo3conf/ext/store_inventory_plugin/Classes",
+      "Module\\StoreInventory\\": "web/typo3conf/ext/store_inventory_module/Classes",
+      "Skener\\Bks\\": "web/typo3conf/ext/bks/Classes"
     }
   }
 }

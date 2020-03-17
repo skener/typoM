@@ -1,0 +1,120 @@
+# Layout
+# Use layout field to customize Layout select-box for all content elements
+TCEFORM.tt_content.layout {
+    removeItems = 1,2,3
+    addItems {
+        # 100 = Example generic layout for all content
+    }
+}
+
+# Add an layout for specific content elements
+# Example:
+# TCEFORM.tt_content.layout {
+#     types {
+#         imageTextLink {
+#             addItems {
+#                 --div-- = ImageTextLink layouts:
+#                 110 = Label
+#             }
+#         }
+#     }
+# }
+
+
+# Appearance
+TCEFORM.tt_content.frame_class.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tt_content.appearance
+TCEFORM.tt_content.frame_class {
+    removeItems = indent-right,indent-left,indent,ruler-after,ruler-before,none
+}
+
+# Add an appearance for all content elements
+TCEFORM.tt_content.frame_class {
+    addItems {
+        gray-background  = Gray Background
+        main-color-wrp  = Main Color Wrapper
+        large-header  = Large Header Text
+        inverse  = Inverse color (text/links/buttons)
+        saturated-inverse  = Inverse and saturate color
+    }
+}
+
+# Add an appearance for specific content elements
+# Example:
+# TCEFORM.tt_content.frame_class {
+#     types {
+#         imageTextLink {
+#             addItems {
+#                 --div-- = ImageTextLink appearance:
+#                 ClassName = Label
+#             }
+#         }
+#     }
+# }
+
+# Space before
+TCEFORM.tt_content.space_before_class {
+    removeItems = extra-small,small,medium,large,extra-large
+    addItems {
+        margin-top-5 = 5px
+        margin-top-10 = 10px
+        margin-top-15 = 15px
+        margin-top-20 = 20px
+        margin-top-25 = 25px
+        margin-top-30 = 30px
+        margin-top-40 = 40px
+        margin-top-50 = 50px
+        margin-top-60 = 60px
+        margin-top-70 = 70px
+    }
+}
+
+# Space after
+TCEFORM.tt_content.space_after_class {
+    removeItems = extra-small,small,medium,large,extra-large
+    addItems {
+        margin-bottom-5 = 5px
+        margin-bottom-10 = 10px
+        margin-bottom-15 = 15px
+        margin-bottom-20 = 20px
+        margin-bottom-25 = 25px
+        margin-bottom-30 = 30px
+        margin-bottom-40 = 40px
+        margin-bottom-50 = 50px
+        margin-bottom-60 = 60px
+        margin-bottom-70 = 70px
+    }
+}
+
+# Aligning
+TCEFORM.tt_content.aligning {
+   addItems {
+       101 = Text align center
+       102 = Block center
+   }
+}
+
+
+# ====================================================
+# FluidStyledContent elements
+# ====================================================
+
+# Table element
+TCEFORM.tt_content.layout {
+    types {
+        table {
+            addItems {
+                --div-- = Table layout:
+                310 = Responsive Table
+            }
+        }
+    }
+}
+TCEFORM.tt_content.table_class {
+    removeItems = bordered,striped
+    addItems {
+        110 = Striped
+        111 = Striped Bordered
+        112 = Striped Bordered Condesed
+        113 = Bordered Condesed Hover
+    }
+}

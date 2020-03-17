@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        fullWidthImage {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:fullWidthImage.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:fullWidthImage.description
+            iconIdentifier = content-elements-fullWidthImage
+        }
+    }
+    show := addToList(fullWidthImage)
+}
+

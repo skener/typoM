@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="title">
+	<f:translate key="tx_bks_domain_model_book.title" />
+</label><br />
+	<f:form.textfield property="title" /><br />
+<label for="author">
+	<f:translate key="tx_bks_domain_model_book.author" />
+</label><br />
+	<f:form.textfield property="author" /><br />
+<label for="image">
+	<f:translate key="tx_bks_domain_model_book.image" />
+</label><br />
+<f:form.upload property="image" >
+	<f:if condition="{resource}">
+		<f:image image="{resource}" alt="" width="50"/>
+	</f:if>
+</f:form.upload>
+<label for="price">
+	<f:translate key="tx_bks_domain_model_book.price" />
+</label><br />
+	<f:form.textfield property="price" /><br />
+</html>
