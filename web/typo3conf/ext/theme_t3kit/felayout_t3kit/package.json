@@ -17,7 +17,7 @@
     "object-fit-images": "3.2.3",
     "simplelightbox": "1.12.1",
     "smtlk-dotdotdot": "1.8.3",
-    "swiper": "3.4.2"
+    "swiper": "6.5.1"
   },
   "devDependencies": {
     "grunt": "1.0.2",
